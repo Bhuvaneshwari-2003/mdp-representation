@@ -1,4 +1,4 @@
-![image](https://github.com/Bhuvaneshwari-2003/mdp-representation/assets/94828604/40d54304-ddb2-4060-8fd6-4158c2030b72)# MDP REPRESENTATION
+# MDP REPRESENTATION
 
 ## AIM:
 To represent a Markov Decision Process(MDP) problem in the following ways.
