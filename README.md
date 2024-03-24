@@ -1,42 +1,41 @@
-# MDP REPRESENTATION
+![image](https://github.com/Bhuvaneshwari-2003/mdp-representation/assets/94828604/40d54304-ddb2-4060-8fd6-4158c2030b72)# MDP REPRESENTATION
 
 ## AIM:
-To represent any one real-world problem in MDP form.
+To represent a Markov Decision Process(MDP) problem in the following ways.
+
+  1.Text representation
+  2.Graphical representation
+  3.Python - Dictonary representation
 
 ## PROBLEM STATEMENT:
-To develope the game application, the role of the agent is to promote the frog into the next level that level having food.
+To develop an environment consisting of a mobile tower as the start and the house as the goal. The aim is to make sure the network signals reaches the house.
+## State Space:
+{0,1,2,3,4,5,6,7}
 
-### State Space:
-```
-{L1,L2,L3}-->{0,1,2}
-L1->Level1
-L2->Level2
-L3->Levvel3
-```
+## Sample State:
+4
 
-### Sample State:
-```
-L2->Level2,1
-```
-### Action Space:
-```
-Jump left
-Jump right
-```
+## Action Space:
 
-### Sample Action:
-```
-Jump right ->Frog gets food
-```
-### Reward Function:
-```
-Reward= 
-         +1, if the frog reaches the leaf with food
-          0, Otherwise
-```         
+ 1.{0} Moving Up
+ 2.{1} Moving Right
+ 3.{2} Moving Down
+ 4.{3} Moving Left
 
-### Graphical Representation:
-![image](https://github.com/Bhuvaneshwari-2003/mdp-representation/assets/94828604/88be26f9-4552-4d59-8794-df4a42f6d23e)
+## Sample Action:
+ {1} Moving Right
+ 
+## Reward Function:
+
+ 1.+1 - If the goal is reached
+ 2.0 - Otherwise
+
+
+## Graphical Representation:
+
+![image](https://github.com/Bhuvaneshwari-2003/mdp-representation/assets/94828604/dae7a6a6-de3c-4800-a493-65a56f79c63e)
+
+
 
 
 ## PYTHON REPRESENTATION:
@@ -44,22 +43,66 @@ Reward=
 Register Number:212221240010
 Name:S.bhuvaneshwari
 P = {
-    0:{
-        0: [(0,1,1,True)],
-        1: [(1.0,0,1.0,False)]
+    0 : {
+        0 : [(1.0, 0, 0.0, False)],
+        1 : [(1.0, 1, 0.0, False)],
+        2 : [(1.0, 2, 0.0, False)],
+        3 : [(1.0, 0, 0.0, False)]
     },
-    1:{
-        0: [(0,2,1,True)],
-        1: [(1,0,1,False)]
+
+    1 : {
+        0 : [(1.0, 1, 0.0, False)],
+        1 : [(1.0, 1, 0.0, False)],
+        2 : [(0.8, 3, 0.0, False), (0.2, 1, 0.0, False)],
+        3 : [(0.8, 0, 0.0, False), (0.2, 1, 0.0, False)]
     },
-    2:{
-        0: [(0,2,1,True)],
-        1: [(1,1,1,False)]
+
+    2 : {
+        0 : [(0.8, 0, 0.0, False), (0.2, 2, 0.0, False)],
+        1 : [(0.8, 3, 0.0, False), (0.2, 2, 0.0, False)],
+        2 : [(1.0, 2, 0.0, False)],
+        3 : [(1.0, 2, 0.0, False)]
+    },
+
+    3 : {
+        0 : [(0.8, 1, 0.0, False), (0.2, 3, 0.0, False)],
+        1 : [(1.0, 3, 0.0, False)],
+        2 : [(0.8, 4, 0.0, False), (0.2, 3, 0.0, False)],
+        3 : [(0.8, 2, 0.0, False), (0.2, 3, 0.0, False)]
+    },
+
+    4 : {
+        0 : [(0.8, 3, 0.0, False), (0.2, 4, 0.0, False)],
+        1 : [(0.8, 5, 0.0, False), (0.2, 4, 0.0, False)],
+        2 : [(0.8, 6, 0.0, False), (0.2, 4, 0.0, False)],
+        3 : [(1.0, 4, 0.0, False)]
+    },
+
+    5 : {
+        0 : [(1.0, 5, 0.0, False)],
+        1 : [(1.0, 5, 0.0, False)],
+        2 : [(0.8, 7, 1.0, True), (0.2, 5, 0.0, False)],
+        3 : [(0.8, 4, 0.0, False), (0.2, 5, 0.0, False)]
+    },
+
+    6 : {
+        0 : [(0.8, 4, 0.0, False), (0.2, 6, 0.0, False)],
+        1 : [(0.8, 7, 1.0, True), (0.2, 6, 0.0, False)],
+        2 : [(1.0, 6, 0.0, False)],
+        3 : [(1.0, 6, 0.0, False)]
+    },
+
+    7 : {
+        0 : [(1.0, 7, 0.0, True)],
+        1 : [(1.0, 7, 0.0, True)],
+        2 : [(1.0, 7, 0.0, True)],
+        3 : [(1.0, 7, 0.0, True)]
     }
 }
 ```
 ## OUTPUT:
-![image](https://github.com/Bhuvaneshwari-2003/mdp-representation/assets/94828604/e781edd2-9639-469b-a0f5-bfb3ae4c778a)
+
+![image](https://github.com/Bhuvaneshwari-2003/mdp-representation/assets/94828604/fc9367f4-b3d1-4df8-8cb9-e727d105ce83)
 
 
 ## RESULT:
